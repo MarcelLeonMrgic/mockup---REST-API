@@ -25,19 +25,19 @@ export default function LoginUI() {
                 setDisplayFailedLogin("hidden")
                 setDisplayGrantedLogin("block text-l text-green-400 text-center")
                 if(benutzerInput === "betriebsrat"){
-                    setTimeout(()=>{router.push("/betriebsrat")},1200);
+                    router.push("/betriebsrat")
                 }
                 if(benutzerInput === "arbeitgeber"){
-                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                    router.push("/arbeitgeber")
                 }
                 if(benutzerInput === "admin"){
-                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                    router.push("/arbeitgeber")
                 }
                 if(benutzerInput === "arbeitnehmer"){
-                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                    router.push("/arbeitgeber")
                 }
                 if(benutzerInput === "kanzleiXY"){
-                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                    router.push("/arbeitgeber")
                 }
 
 
