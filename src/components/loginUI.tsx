@@ -87,7 +87,7 @@ export default function LoginUI() {
                         </div>
 
                         <div className="text-sm">
-                            <a href="#" className="font-medium text-indigo-600 hover:text-blue-500">Passwort
+                            <a href="#" className="font-medium text-blue-600 hover:text-blue-500">Passwort
                                 vergessen?</a>
                         </div>
                     </div>
