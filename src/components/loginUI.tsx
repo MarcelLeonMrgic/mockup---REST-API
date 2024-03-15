@@ -27,6 +27,18 @@ export default function LoginUI() {
                 if(benutzerInput === "betriebsrat"){
                     setTimeout(()=>{router.push("/betriebsrat")},1200);
                 }
+                if(benutzerInput === "arbeitgeber"){
+                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                }
+                if(benutzerInput === "admin"){
+                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                }
+                if(benutzerInput === "arbeitnehmer"){
+                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                }
+                if(benutzerInput === "kanzleiXY"){
+                    setTimeout(()=>{router.push("/arbeitgeber")},1200);
+                }
 
 
             }
