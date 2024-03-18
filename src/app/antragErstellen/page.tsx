@@ -23,7 +23,9 @@ export default function AntragErstellen(){
                 body: JSON.stringify(({titel,beschreibung}))
             })
             if(res.ok){
-                router.push("/")
+
+                router.push("/projektantrag")
+                router.refresh();
 
             }else{
                 new Error("Antrag konnte nicht erstellt werden")

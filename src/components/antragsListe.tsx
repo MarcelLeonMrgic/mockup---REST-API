@@ -13,7 +13,7 @@ interface Antrag {
 
 const getAntrag = async()=>{
     try{
-        const res = await fetch('http://localhost:3000/api/antraege',{
+        const res = await fetch('https://mockup-tau.vercel.app//api/antraege',{
             cache: "no-store",
         });
         if(!res.ok){
