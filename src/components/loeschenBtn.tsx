@@ -11,7 +11,7 @@ export default function LoeschenBTN({id}: LoeschenBTNProps){
         const confirmation = confirm("Wollen Sie den Antrag wirklich löschen?");
 
         if (confirmation){
-            const res = await fetch(`http://localhost:3000/api/antraege?id=${id}`,{
+            const res = await fetch(`https://mockup-tau.vercel.app/api/antraege?id=${id}`,{
                 method:"DELETE"
             })
             if(res.ok){

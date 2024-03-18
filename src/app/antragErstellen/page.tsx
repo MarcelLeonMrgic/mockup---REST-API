@@ -15,7 +15,7 @@ export default function AntragErstellen(){
             return;
         }
         try {
-            const res =await fetch("http://localhost:3000/api/antraege" ,{
+            const res =await fetch("https://mockup-tau.vercel.app/api/antraege" ,{
                 method:"POST",
                 headers:{
                     "Content-type":"application/json"

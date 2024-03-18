@@ -19,7 +19,7 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
         e.preventDefault();
 
         try {
-            const res = await fetch(`http://localhost:3000/api/antraege/${id}`, {
+            const res = await fetch(`hhttps://mockup-tau.vercel.app/api/antraege/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
