@@ -1,8 +1,28 @@
+"use client"
 import {HiOutlineTrash} from "react-icons/hi";
+import {useRouter} from "next/navigation";
 
-export default function LoeschenBTN(){
+interface LoeschenBTNProps {
+    id: string;
+}
+export default function LoeschenBTN({id}: LoeschenBTNProps){
+    const router = useRouter()
+    const entferneAntrag = async ()=>{
+        const confirmation = confirm("Wollen Sie den Antrag wirklich löschen?");
+
+        if (confirmation){
+            const res = await fetch(`http://localhost:3000/api/antraege?id=${id}`,{
+                method:"DELETE"
+            })
+            if(res.ok){
+
+                router.refresh();
+            }
+
+        }
+    }
     return(
-        <button>
+        <button onClick={entferneAntrag}>
             <HiOutlineTrash className={"text-red-400"} size={24}></HiOutlineTrash>
         </button>
     )

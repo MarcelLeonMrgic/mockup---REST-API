@@ -19,14 +19,14 @@ export default function RootLayout({
   return (
     <html lang="de">
     <body className={inter.className}>
-    <div className={"max-w-3xl mx-auto p-8"}>
+    <div>
 
 
-        <div className={"mt-8"}>
+
             {children}
-        </div>
+
     </div>
-        <Footer/>
+    <Footer/>
     </body>
     </html>
 );
