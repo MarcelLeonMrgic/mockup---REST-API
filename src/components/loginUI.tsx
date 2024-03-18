@@ -58,7 +58,7 @@ export default function LoginUI() {
         <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
             <div className="max-w-md w-full space-y-8 p-10 bg-white shadow-md rounded-lg ">
                 <div className="flex justify-center ">
-                  <h1 className="text-xl">brweb.app</h1>
+                  <h1 className="text-xl text-blue-600">brweb.app</h1>
                 </div>
                 <form className="mt-8 space-y-6" action="#" method="POST">
                     <input type="hidden" name="remember" value="true" />
@@ -81,7 +81,7 @@ export default function LoginUI() {
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                             <input id="remember_me" name="remember_me" type="checkbox"
-                                   className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"/>
+                                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"/>
                             <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">Angemeldet
                                 bleiben</label>
                         </div>
