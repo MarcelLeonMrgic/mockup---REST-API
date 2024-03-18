@@ -29,7 +29,7 @@ export default  async function Antragsliste(){
     return(
         <>
             {antraege.map((a: Antrag) =>(
-            <div className={"p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"}>
+            <div key={a._id} className={"p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"}>
                 <div>
                     <h2 className={"font-bold text-2xl"}>{a.titel}</h2>
                     <div>{a.beschreibung}</div>
