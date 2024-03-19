@@ -1,4 +1,5 @@
 import AntragBearbeitenUI from "@/components/antragBearbeiten";
+
 const getTopicById = async (id:string) => {
     try {
         const res = await fetch(`api/antraege/${id}`, {
@@ -12,15 +13,24 @@ const getTopicById = async (id:string) => {
         return res.json();
     } catch (error) {
         console.log(error);
+        return null; // Return null or a similar placeholder to indicate failure
     }
 };
+
 interface Params {
     id: string;
 }
 
 export default async function EditTopic({ params }: { params: Params }) {
     const { id } = params;
-    const { antrag } = await getTopicById(id);
+    const response = await getTopicById(id);
+    if (!response || !response.antrag) {
+        // Handle the error case, perhaps by returning an error message or redirecting
+        console.error("Antrag not found or an error occurred");
+        return <div>Error: Antrag not found or an error occurred</div>;
+    }
+
+    const { antrag } = response;
     const { titel, beschreibung } = antrag;
 
     return <AntragBearbeitenUI id={id} titel={titel} beschreibung={beschreibung} />;
