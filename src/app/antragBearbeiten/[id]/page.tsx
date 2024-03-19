@@ -26,7 +26,7 @@ export default async function EditTopic({ params }: { params: Params }) {
     const response = await getTopicById(id);
     if (!response || !response.antrag) {
         // Handle the error case, perhaps by returning an error message or redirecting
-        console.error("Antrag not found or an error occurred");
+        console.error(`Antrag not found or an error occurred ${params.id}`);
         return <div>Error: Antrag not found or an error occurred</div>;
     }
 
