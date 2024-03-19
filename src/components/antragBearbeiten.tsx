@@ -35,6 +35,7 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
             }
 
             router.refresh();
+            router.push("/projektantrag");
 
         } catch (error) {
             console.log(error);
