@@ -19,13 +19,14 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
         e.preventDefault();
 
         try {
-            const res = await fetch(`api/antraege?id=${id}`, {
+            const res = await fetch(`/api/proxy/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
                 },
                 body: JSON.stringify({ neuerTitel, neueBeschreibung }),
             });
+
 
             if (!res.ok) {
                 throw new Error("Failed to update topic");
