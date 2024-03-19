@@ -19,17 +19,18 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
         e.preventDefault();
 
         try {
-            const res = await fetch(`/api/proxy/${id}`, {
+            const res = await fetch(`https://mockup-tau.vercel.app/api/antraege/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
-                        key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+
                 },
                 body: JSON.stringify({ neuerTitel, neueBeschreibung }),
             });
 
 
             if (!res.ok) {
+                console.log(id)
                 throw new Error("Failed to update topic");
             }
 
