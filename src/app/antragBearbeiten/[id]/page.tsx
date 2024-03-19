@@ -1,7 +1,7 @@
 import AntragBearbeitenUI from "@/components/antragBearbeiten";
 const getTopicById = async (id:string) => {
     try {
-        const res = await fetch(`https://mockup-tau.vercel.app/api/antraege/${id}`, {
+        const res = await fetch(`api/antraege/${id}`, {
             cache: "no-store",
         });
 
