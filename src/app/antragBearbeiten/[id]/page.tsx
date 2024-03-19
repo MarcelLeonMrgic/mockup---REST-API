@@ -13,7 +13,7 @@ const getTopicById = async (id:string) => {
         return res.json();
     } catch (error) {
         console.log(error);
-        return null; // Return null or a similar placeholder to indicate failure
+        return null;
     }
 };
 
