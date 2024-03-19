@@ -39,6 +39,8 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
     };
 
     return (
+        <>
+        <h1>test</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <input
                 onChange={(e) => setNeuerTitel(e.target.value)}
@@ -60,5 +62,6 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
                 Update Topic
             </button>
         </form>
+        </>
     );
 }
