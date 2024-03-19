@@ -1,6 +1,6 @@
 import AntragBearbeitenUI from "@/components/antragBearbeiten";
 
-const getTopicById = async (id:any) => {
+const getTopicById = async (id:string) => {
     try {
         const res = await fetch(`https://mockup-tau.vercel.app/api/antraege/${id}`, {
             cache: "no-store",
@@ -18,7 +18,7 @@ const getTopicById = async (id:any) => {
 };
 
 interface Params {
-    id: any;
+    id: string;
 }
 
 export default async function EditTopic({ params }: { params: Params }) {
