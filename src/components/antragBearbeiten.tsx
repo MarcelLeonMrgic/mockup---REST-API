@@ -23,6 +23,7 @@ export default function AntragBearbeitenUI({ id, titel, beschreibung }: AntragBe
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
+                        key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT"
                 },
                 body: JSON.stringify({ neuerTitel, neueBeschreibung }),
             });

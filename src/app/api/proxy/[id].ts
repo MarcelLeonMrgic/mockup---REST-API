@@ -10,6 +10,16 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
+    // CORS-Header setzen
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Erlaubt Anfragen von jedem Ursprung
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS, PATCH, DELETE, POST, PUT');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+    // OPTIONS-Anfrage direkt beantworten
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
+    }
+
     const { id } = req.query;
 
     // Sicherstellen, dass nur PUT-Anfragen verarbeitet werden
