@@ -23,14 +23,8 @@ interface Params {
 
 export default async function EditTopic({ params }: { params: Params }) {
     const { id } = params;
-    const response = await getTopicById(id);
-    if (!response || !response.antrag) {
-        // Handle the error case, perhaps by returning an error message or redirecting
-        console.error(`Antrag not found or an error occurred ${params.id}`);
-        return <div>Error: Antrag not found or an error occurred</div>;
-    }
 
-    const { antrag } = response;
+    const { antrag } = await  getTopicById(id);
     const { titel, beschreibung } = antrag;
 
     return <AntragBearbeitenUI id={id} titel={titel} beschreibung={beschreibung} />;
