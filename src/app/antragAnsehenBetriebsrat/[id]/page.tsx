@@ -28,7 +28,7 @@ export default async function SeeTopic({ params }: { params: Params }) {
     const { id } = params;
 
     const { antrag } = await  getTopicById(id);
-    const { titel, aUE , zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten, genehmigt } = antrag;
+    const { titel, aUE , zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten,kommentarBetriebsrat, genehmigt } = antrag;
 
     return <AntragAnsehenBetriebsratUI id={id}
                             titel={titel}
@@ -44,5 +44,7 @@ export default async function SeeTopic({ params }: { params: Params }) {
                             zweckPersBezDaten={zweckPersBezDaten}
                             artDatenerfassung={artDatenerfassung}
                             sicherungVerwaltungLoeschungPersBezDaten={sicherungVerwaltungLoeschungPersBezDaten}
-                            genehmigt={genehmigt} />;
+                            genehmigt={genehmigt}
+                                       kommentarBetriebsrat={kommentarBetriebsrat}
+    />;
 }
