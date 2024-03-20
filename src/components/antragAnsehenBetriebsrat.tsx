@@ -96,7 +96,9 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
                     <h1>Antrag zustimmen</h1>
                     <input
                         type="checkbox"
-                        onChange={(e) => setNeueGenehmigt(e.target.checked)}></input>
+                        checked={neueGenehmigt} // Stellt sicher, dass die Checkbox den Zustand von `neueGenehmigt` reflektiert
+                        onChange={(e) => setNeueGenehmigt(e.target.checked)} // Aktualisiert `neueGenehmigt` basierend auf dem Check-Status
+                    />
                 </div>
 
                 <button type="submit">Submit</button>
