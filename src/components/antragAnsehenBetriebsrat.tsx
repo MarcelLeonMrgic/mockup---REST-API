@@ -21,12 +21,15 @@ interface AntragAnsehenUIProps{
     artDatenerfassung:string;
     sicherungVerwaltungLoeschungPersBezDaten:string;
 
+    kommentarBetriebsrat:string;
+
     genehmigt: boolean;
 }
 
 
-export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten, genehmigt }: AntragAnsehenUIProps) {
+export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten,kommentarBetriebsrat, genehmigt }: AntragAnsehenUIProps) {
     const [neueGenehmigt, setNeueGenehmigt] = useState(genehmigt);
+    const [neueKommentarBetriebsrat, setNeueKommentarBetriebsrat] = useState(kommentarBetriebsrat);
     const router = useRouter();
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -38,7 +41,7 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
                     "Content-type": "application/json",
 
                 },
-                body: JSON.stringify({ neueGenehmigt }),
+                body: JSON.stringify({ neueGenehmigt ,neueKommentarBetriebsrat }),
             });
 
 
@@ -96,9 +99,14 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
                     <h1>Antrag zustimmen</h1>
                     <input
                         type="checkbox"
-                        checked={neueGenehmigt} // Stellt sicher, dass die Checkbox den Zustand von `neueGenehmigt` reflektiert
-                        onChange={(e) => setNeueGenehmigt(e.target.checked)} // Aktualisiert `neueGenehmigt` basierend auf dem Check-Status
+                        checked={neueGenehmigt}
+                        onChange={(e) => setNeueGenehmigt(e.target.checked)}
                     />
+                    <textarea
+                        className="border border-slate-500 p-2 h-32"
+                        onChange={(e) => setNeueKommentarBetriebsrat(e.target.value)}
+                        value={kommentarBetriebsrat}
+                    ></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
