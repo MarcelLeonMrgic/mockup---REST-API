@@ -41,7 +41,7 @@ export default function AntragErstellen(){
 
                 return (
                 <>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-4xl mx-auto p-4">
                         <h1>Antragstitel</h1>
                         <input
                             className="border border-slate-500 p-2"
