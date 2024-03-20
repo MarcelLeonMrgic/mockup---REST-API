@@ -29,22 +29,23 @@ export default  async function AntragsListeFuerBetriebsrat(){
     const {antraege}= await getAntrag();
     return(
         <>
-            {antraege.map((a: Antrag) =>(
-                <div key={a._id} className={"p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"}>
+            {antraege.map((a: Antrag) => (
+                <div key={a._id} className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start bg-white shadow rounded-lg">
                     <div>
-                        <h2 className={"font-bold text-2xl"}>{a.titel}</h2>
-                        <div>{a.beschreibung}</div>
-                        <div>{a._id}</div>
+                        <h2 className="font-bold text-xl text-gray-800">{a.titel}</h2>
+                        <p className="text-gray-600">{a.beschreibung}</p>
+                        <p className="text-sm text-gray-400">{a._id}</p>
                     </div>
 
-                    <div className={"flex gap-2"}>
-
-                        <Link href={`/antragAnsehenBetriebsrat/${a._id}`}><HiEye size={24}></HiEye> </Link>
+                    <div className="flex gap-2 items-center">
+                        <Link href={`/antragAnsehenBetriebsrat/${a._id}`}>
+                            <a className="text-blue-500 hover:text-blue-600 transition duration-150 ease-in-out">
+                                <HiEye size={24} />
+                            </a>
+                        </Link>
                     </div>
                 </div>
             ))}
-
-
         </>
     )
 }
