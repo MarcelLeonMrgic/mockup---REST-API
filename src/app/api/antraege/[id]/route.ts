@@ -7,9 +7,9 @@ interface Params {
 }
 export async function PUT(request: any, {params}: {params: Params}) {
     const {id} = params;
-    const{neuerTitel:titel , neueAUE:aUE , neueZweckbestimmung:zweckbestimmung , neueKostenNutzenSchaetzung:kostenNutzenSchaetzung} = await request.json();
+    const{neuerTitel:titel , neueAUE:aUE , neueZweckbestimmung:zweckbestimmung , neueKostenNutzenSchaetzung:kostenNutzenSchaetzung , neueVerzeichnisHardSoftware:verzeichnisHardSoftware, neueKonzeptZugriffsberechtigung:konzeptZugriffsberechtigung , neueSchnittstellenITSysteme:schnittstellenITSysteme, neueOrganisatorischeUndZeitlicheProjektabwicklung:organisatorischeUndZeitlicheProjektabwicklung , neueAlternativen:alternativen , neueListePersBezDaten:listePersBezDaten , neueZweckPersBezDaten:zweckPersBezDaten ,neueArtDatenerfassung:artDatenerfassung,neueSicherungVerwaltungLoeschungPersBezDaten:sicherungVerwaltungLoeschungPersBezDaten} = await request.json();
     await connectMongoDB();
-    await Antrag.findByIdAndUpdate(id,{titel, aUE, zweckbestimmung, kostenNutzenSchaetzung});
+    await Antrag.findByIdAndUpdate(id,{titel, aUE, zweckbestimmung, kostenNutzenSchaetzung, verzeichnisHardSoftware ,konzeptZugriffsberechtigung , schnittstellenITSysteme, organisatorischeUndZeitlicheProjektabwicklung ,alternativen, listePersBezDaten , zweckPersBezDaten, artDatenerfassung, sicherungVerwaltungLoeschungPersBezDaten});
     return NextResponse.json({message:"Antrag bearbeitet"},{status:200});
 }
 
