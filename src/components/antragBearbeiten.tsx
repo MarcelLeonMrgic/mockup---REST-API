@@ -57,7 +57,7 @@ export default function AntragBearbeitenUI({ id, titel, aUE,zweckbestimmung,kost
                 throw new Error("Failed to update topic");
             }
 
-            router.refresh();
+
             router.push("/projektantrag");
 
         } catch (error) {
