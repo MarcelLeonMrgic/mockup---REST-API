@@ -58,61 +58,65 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
         }
     };
     return (<>
-            <div className="max-w-3xl mx-auto my-10 bg-white shadow-lg rounded-lg overflow-hidden">
-                <div className="p-4 bg-gray-100 border-b">
-                    <h1 className="text-lg font-semibold text-gray-900">{titel}</h1>
+            <div className="max-w-4xl mx-auto my-10 bg-white shadow-xl rounded-lg">
+                <div className="p-5 bg-gray-100 border-b border-gray-200">
+                    <h1 className="text-2xl font-semibold text-gray-900">{titel}</h1>
                 </div>
-                <div className="p-4">
-                    <p className="text-gray-700"><strong>Antragseinheit (aUE):</strong> {aUE}</p>
-                    <p className="text-gray-700"><strong>Zweckbestimmung:</strong> {zweckbestimmung}</p>
-                    <p className="text-gray-700"><strong>Kosten-Nutzen-Schätzung:</strong> {kostenNutzenSchaetzung}</p>
-                    <p className="text-gray-700"><strong>Verzeichnis der Hard- und
-                        Software:</strong> {verzeichnisHardSoftware}</p>
-                    <p className="text-gray-700"><strong>Konzept der
-                        Zugriffsberechtigung:</strong> {konzeptZugriffsberechtigung}</p>
-                    <p className="text-gray-700"><strong>Schnittstellen zu
-                        IT-Systemen:</strong> {schnittstellenITSysteme}</p>
-                    <p className="text-gray-700"><strong>Organisatorische und zeitliche
-                        Projektabwicklung:</strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
-                    <p className="text-gray-700"><strong>Alternativen:</strong> {alternativen}</p>
-                    <p className="text-gray-700"><strong>Liste der personenbezogenen Daten:</strong> {listePersBezDaten}
+                <div className="p-5">
+                    <p className="text-gray-700 mb-4"><strong>Art, Umfang und Einsatzort des IT-Systems:</strong> {aUE}</p>
+                    <p className="text-gray-700 mb-4"><strong>Zweckbestimmung:</strong> {zweckbestimmung}</p>
+                    <p className="text-gray-700 mb-4"><strong>Kosten-Nutzen-Schätzung:</strong> {kostenNutzenSchaetzung}
                     </p>
-                    <p className="text-gray-700"><strong>Zweck der Verarbeitung personenbezogener
+                    <p className="text-gray-700 mb-4"><strong>Verzeichnis der Hard- und
+                        Software:</strong> {verzeichnisHardSoftware}</p>
+                    <p className="text-gray-700 mb-4"><strong>Konzept der
+                        Zugriffsberechtigung:</strong> {konzeptZugriffsberechtigung}</p>
+                    <p className="text-gray-700 mb-4"><strong>Schnittstellen zu
+                        IT-Systemen:</strong> {schnittstellenITSysteme}</p>
+                    <p className="text-gray-700 mb-4"><strong>Organisatorische und zeitliche
+                        Projektabwicklung:</strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
+                    <p className="text-gray-700 mb-4"><strong>Alternativen:</strong> {alternativen}</p>
+                    <p className="text-gray-700 mb-4"><strong>Liste der personenbezogenen
+                        Daten:</strong> {listePersBezDaten}</p>
+                    <p className="text-gray-700 mb-4"><strong>Zweck der Verarbeitung personenbezogener
                         Daten:</strong> {zweckPersBezDaten}</p>
-                    <p className="text-gray-700"><strong>Art der Datenerfassung:</strong> {artDatenerfassung}</p>
-                    <p className="text-gray-700"><strong>Sicherung, Verwaltung und Löschung personenbezogener
+                    <p className="text-gray-700 mb-4"><strong>Art der Datenerfassung:</strong> {artDatenerfassung}</p>
+                    <p className="text-gray-700 mb-4"><strong>Sicherung, Verwaltung und Löschung personenbezogener
                         Daten:</strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
                 </div>
-                <div className="p-4 border-t border-gray-200">
-                <span
-                    className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${genehmigt ? 'text-green-900 bg-green-200' : 'text-red-900 bg-red-200'}`}>
-                    {genehmigt ? 'Genehmigt' : 'Derzeit nicht genehmigt'}
-                </span>
-                </div>
-                <div className="p-4 border-t border-gray-200 text-right">
+                <div className="p-5 border-t border-gray-200 flex justify-between items-center">
+    <span
+        className={`rounded-full px-4 py-1 text-sm font-semibold ${genehmigt ? 'text-green-800 bg-green-100' : 'text-red-800 bg-red-100'}`}>
+      {genehmigt ? 'Genehmigt' : 'Derzeit nicht genehmigt'}
+    </span>
                     <span className="text-xs text-gray-600">ID: {id}</span>
                 </div>
-            </div>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-
-                <div>
-                    <h1>Antrag zustimmen</h1>
-                    <input
-                        type="checkbox"
-                        checked={neueGenehmigt}
-                        onChange={(e) => setNeueGenehmigt(e.target.checked)}
-                    />
+                <form onSubmit={handleSubmit} className="p-5 border-t border-gray-200 flex flex-col gap-4">
+                    <div>
+                        <label htmlFor="approvalCheckbox" className="flex items-center gap-2">
+                            <input
+                                id="approvalCheckbox"
+                                type="checkbox"
+                                className="form-checkbox h-5 w-5"
+                                checked={neueGenehmigt}
+                                onChange={(e) => setNeueGenehmigt(e.target.checked)}
+                            />
+                            <span className="text-lg">Antrag zustimmen</span>
+                        </label>
+                    </div>
                     <textarea
-                        className="border border-slate-500 p-2 h-32"
+                        className="border border-gray-300 p-2 h-32 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                         onChange={(e) => setNeueKommentarBetriebsrat(e.target.value)}
                         value={kommentarBetriebsrat}
                     ></textarea>
-                </div>
+                    <button type="submit"
+                            className="self-end bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow">
+                        BEstätigen
+                    </button>
+                </form>
+            </div>
 
-                <button type="submit">Submit</button>
 
-
-            </form>
         </>
 
     );
