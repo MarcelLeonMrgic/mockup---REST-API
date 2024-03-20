@@ -11,7 +11,7 @@ const antragSchema = new Schema({
     organisatorischeUndZeitlicheProjektabwicklung:String,
     alternativen:String,
     listePersBezDaten:String,
-    zweckPErsBezDaten:String,
+    zweckPersBezDaten:String,
     artDatenerfassung:String,
     sicherungVerwaltungLoeschungPersBezDaten:String,
     genehmigt:Boolean

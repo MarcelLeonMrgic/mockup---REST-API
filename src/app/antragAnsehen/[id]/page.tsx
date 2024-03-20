@@ -1,5 +1,6 @@
 import AntragBearbeitenUI from "@/components/antragBearbeiten";
 import AntragAnsehenUI from "@/components/antragAnsehen";
+import MenuArbeitgeber from "@/components/menuArbeitgeber";
 
 const getTopicById = async (id:string) => {
     try {
@@ -22,10 +23,25 @@ interface Params {
 }
 
 export default async function SeeTopic({ params }: { params: Params }) {
+    <MenuArbeitgeber/>
     const { id } = params;
 
     const { antrag } = await  getTopicById(id);
-    const { titel, beschreibung , genehmigt } = antrag;
+    const { titel, aUE , zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten, genehmigt } = antrag;
 
-    return <AntragAnsehenUI id={id} titel={titel} beschreibung={beschreibung} genehmigt={genehmigt} />;
+    return <AntragAnsehenUI id={id}
+                            titel={titel}
+                            aUE={aUE}
+                            zweckbestimmung={zweckbestimmung}
+                            kostenNutzenSchaetzung={kostenNutzenSchaetzung}
+                            verzeichnisHardSoftware={verzeichnisHardSoftware}
+                            konzeptZugriffsberechtigung={konzeptZugriffsberechtigung}
+                            schnittstellenITSysteme={schnittstellenITSysteme}
+                            organisatorischeUndZeitlicheProjektabwicklung={organisatorischeUndZeitlicheProjektabwicklung}
+                            alternativen={alternativen}
+                            listePersBezDaten={listePersBezDaten}
+                            zweckPersBezDaten={zweckPersBezDaten}
+                            artDatenerfassung={artDatenerfassung}
+                            sicherungVerwaltungLoeschungPersBezDaten={sicherungVerwaltungLoeschungPersBezDaten}
+                            genehmigt={genehmigt} />;
 }
