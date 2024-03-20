@@ -28,18 +28,24 @@ export default function AntragAnsehenUI({ id, titel, aUE,zweckbestimmung,kostenN
                 <h1 className="text-lg font-semibold text-gray-900">{titel}</h1>
             </div>
             <div className="p-4">
-                <p className="text-gray-700"><strong>Art, Umfang und Einsatzort des IT-Systems:</strong> {aUE}</p>
-                <p className="text-gray-700"><strong>Zweckbestimmung:</strong> {zweckbestimmung}</p>
-                <p className="text-gray-700"><strong>Kosten-Nutzen-Schätzung:</strong> {kostenNutzenSchaetzung}</p>
-                <p className="text-gray-700"><strong>Verzeichnis der Hard- und Software:</strong> {verzeichnisHardSoftware}</p>
-                <p className="text-gray-700"><strong>Konzept der Zugriffsberechtigung:</strong> {konzeptZugriffsberechtigung}</p>
-                <p className="text-gray-700"><strong>Schnittstellen zu IT-Systemen:</strong> {schnittstellenITSysteme}</p>
-                <p className="text-gray-700"><strong>Organisatorische und zeitliche Projektabwicklung:</strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
-                <p className="text-gray-700"><strong>Alternativen:</strong> {alternativen}</p>
-                <p className="text-gray-700"><strong>Liste der personenbezogenen Daten:</strong> {listePersBezDaten}</p>
-                <p className="text-gray-700"><strong>Zweck der Verarbeitung personenbezogener Daten:</strong> {zweckPersBezDaten}</p>
-                <p className="text-gray-700"><strong>Art der Datenerfassung:</strong> {artDatenerfassung}</p>
-                <p className="text-gray-700"><strong>Sicherung, Verwaltung und Löschung personenbezogener Daten:</strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
+                <p className="text-gray-700"><strong>Art, Umfang und Einsatzort des IT-Systems: <br/></strong> {aUE}</p>
+                <p className="text-gray-700"><strong>Zweckbestimmung:<br/></strong> {zweckbestimmung}</p>
+                <p className="text-gray-700"><strong>Kosten-Nutzen-Schätzung:<br/></strong> {kostenNutzenSchaetzung}</p>
+                <p className="text-gray-700"><strong>Verzeichnis der Hard- und
+                    Software:<br/></strong> {verzeichnisHardSoftware}</p>
+                <p className="text-gray-700"><strong>Konzept der
+                    Zugriffsberechtigung:<br/></strong> {konzeptZugriffsberechtigung}</p>
+                <p className="text-gray-700"><strong>Schnittstellen zu
+                    IT-Systemen:<br/></strong> {schnittstellenITSysteme}</p>
+                <p className="text-gray-700"><strong>Organisatorische und zeitliche
+                    Projektabwicklung:<br/></strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
+                <p className="text-gray-700"><strong>Alternativen:<br/></strong> {alternativen}</p>
+                <p className="text-gray-700"><strong>Liste der personenbezogenen Daten:<br/></strong> {listePersBezDaten}</p>
+                <p className="text-gray-700"><strong>Zweck der Verarbeitung personenbezogener
+                    Daten:<br/></strong> {zweckPersBezDaten}</p>
+                <p className="text-gray-700"><strong>Art der Datenerfassung:<br/></strong> {artDatenerfassung}</p>
+                <p className="text-gray-700"><strong>Sicherung, Verwaltung und Löschung personenbezogener
+                    Daten:<br/></strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
             </div>
             <div className="p-4 border-t border-gray-200">
                 <span
