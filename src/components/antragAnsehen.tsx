@@ -17,10 +17,11 @@ interface AntragAnsehenUIProps{
     zweckPersBezDaten:string;
     artDatenerfassung:string;
     sicherungVerwaltungLoeschungPersBezDaten:string;
+    kommentarBetriebsrat:string;
 
     genehmigt: boolean;
 }
-export default function AntragAnsehenUI({ id, titel, aUE,zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten, genehmigt }: AntragAnsehenUIProps) {
+export default function AntragAnsehenUI({ id, titel, aUE,zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten,kommentarBetriebsrat, genehmigt }: AntragAnsehenUIProps) {
     return (
         <div className="max-w-3xl mx-auto my-10 bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="p-4 bg-gray-100 border-b">
@@ -41,10 +42,13 @@ export default function AntragAnsehenUI({ id, titel, aUE,zweckbestimmung,kostenN
                 <p className="text-gray-700"><strong>Sicherung, Verwaltung und Löschung personenbezogener Daten:</strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
             </div>
             <div className="p-4 border-t border-gray-200">
-                <span className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${genehmigt ? 'text-green-900 bg-green-200' : 'text-red-900 bg-red-200'}`}>
+                <span
+                    className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${genehmigt ? 'text-green-900 bg-green-200' : 'text-red-900 bg-red-200'}`}>
                     {genehmigt ? 'Genehmigt' : 'Derzeit nicht genehmigt'}
                 </span>
+                <p className="text-gray-700"><strong>Kommentar Betriebsrat</strong> {kommentarBetriebsrat}</p>
             </div>
+
             <div className="p-4 border-t border-gray-200 text-right">
                 <span className="text-xs text-gray-600">ID: {id}</span>
             </div>
