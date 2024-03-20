@@ -7,9 +7,9 @@ interface Params {
 }
 export async function PUT(request: any, {params}: {params: Params}) {
     const {id} = params;
-    const{neuerTitel:titel , neueBeschreibung:beschreibung} = await request.json();
+    const{neuerTitel:titel , neueAUE:aUE} = await request.json();
     await connectMongoDB();
-    await Antrag.findByIdAndUpdate(id,{titel, beschreibung});
+    await Antrag.findByIdAndUpdate(id,{titel, aUE});
     return NextResponse.json({message:"Antrag bearbeitet"},{status:200});
 }
 
