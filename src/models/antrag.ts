@@ -2,7 +2,8 @@ import mongoose, {Schema} from "mongoose";
 
 const antragSchema = new Schema({
     titel: String,
-    beschreibung:String
+    beschreibung:String,
+    genehmigt:Boolean
 },
     {
     timestamps: true}
