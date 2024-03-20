@@ -28,7 +28,7 @@ export default function AntragAnsehenUI({ id, titel, aUE,zweckbestimmung,kostenN
                 <h1 className="text-lg font-semibold text-gray-900">{titel}</h1>
             </div>
             <div className="p-4">
-                <p className="text-gray-700"><strong>Antragseinheit (aUE):</strong> {aUE}</p>
+                <p className="text-gray-700"><strong>Art, Umfang und Einsatzort des IT-Systems:</strong> {aUE}</p>
                 <p className="text-gray-700"><strong>Zweckbestimmung:</strong> {zweckbestimmung}</p>
                 <p className="text-gray-700"><strong>Kosten-Nutzen-Schätzung:</strong> {kostenNutzenSchaetzung}</p>
                 <p className="text-gray-700"><strong>Verzeichnis der Hard- und Software:</strong> {verzeichnisHardSoftware}</p>
