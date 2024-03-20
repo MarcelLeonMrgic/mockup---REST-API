@@ -42,17 +42,102 @@ export default function AntragErstellen(){
                 return (
                 <>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                        <h1>Art, Umfang und Einsatzort des IT-Systems</h1>
+                        <h1>Antragstitel</h1>
                         <input
                             className="border border-slate-500 p-2"
                             type="text"
-                            placeholder="Antragstitel"
                             onChange={(e) => setTitel(e.target.value)}
                             value={titel}
                         />
+                        <h1>Art, Umfang und Einsatzort des IT-Systems</h1>
                         <textarea
                             className="border border-slate-500 p-2 h-32"
-                            placeholder="Antragsbeschreibung"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={titel}
+                        ></textarea>
+
+                        <h1>Zweckbestimmung des IT-Systems bzw. mit dem
+                            IT-System verbundene wirtschaftliche,
+                            technische und personelle Zielsetzungen</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Kosten-Nutzen-Schätzungen; wesentliche
+                            wirtschaftliche Auswirkungen auf das
+                            Unternehmen</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+
+                        <h1>Verzeichnis der eingesetzten Hard- und
+                            Software</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+
+                        <h1>Konzept der Zugriffsberechtigung</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+
+                        <h1>Schnittstellen zu anderen vorhandenen IT-
+                            Systemen sowie ein Verzeichnis der darüber
+                            ausgetauschten personenbezogenen Daten</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+
+                        <h1>Komplette und aktuelle Darstellung der
+                            beabsichtigten organisatorischen und zeitlichen
+                            Projektabwicklung</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Information über mögliche Alternativen zum
+                            geplanten IT-System</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Liste der mit dem IT-System verarbeiteten und
+                            gespeicherten personenbezogenen Daten</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Zweck der verarbeiteten personenbezogenen
+                            Daten</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Art der Datenerfassung und
+                            Weiterverarbeitung, sofern ein Bezug zu
+                            Beschäftigtendaten besteht</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
+                            onChange={(e) => setBeschreibung(e.target.value)}
+                            value={beschreibung}
+                        ></textarea>
+                        <h1>Vorgesehene Sicherung, Verwaltung und
+                            Löschung der personenbezogenen Daten</h1>
+                        <textarea
+                            className="border border-slate-500 p-2 h-32"
                             onChange={(e) => setBeschreibung(e.target.value)}
                             value={beschreibung}
                         ></textarea>
@@ -63,8 +148,6 @@ export default function AntragErstellen(){
                     </form>
                 </>
                 );
-
-
 
 
 }
