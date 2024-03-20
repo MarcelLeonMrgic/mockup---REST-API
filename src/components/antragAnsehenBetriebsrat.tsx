@@ -107,11 +107,11 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
                     <textarea
                         className="border border-gray-300 p-2 h-32 rounded-lg shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                         onChange={(e) => setNeueKommentarBetriebsrat(e.target.value)}
-                        value={kommentarBetriebsrat}
+                        value={neueKommentarBetriebsrat}
                     ></textarea>
                     <button type="submit"
                             className="self-end bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow">
-                        BEstätigen
+                        Bestätigen
                     </button>
                 </form>
             </div>
