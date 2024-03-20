@@ -51,7 +51,7 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
             }
 
             router.refresh();
-            router.push("/projektantrag");
+            router.push("/antraegeBetriebsrat");
 
         } catch (error) {
             console.log(error);
