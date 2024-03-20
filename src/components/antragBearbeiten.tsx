@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface AntragBearbeitenUIProps {
-    id: string; // Assuming id is a string. Adjust this type based on your actual data structure.
+    id: string;
     titel: string;
     beschreibung: string;
 }

@@ -1,6 +1,7 @@
 import LoeschenBTN from "@/components/loeschenBtn";
 import Link from "next/link";
 import {HiPencilAlt} from "react-icons/hi";
+import { HiEye } from "react-icons/hi";
 import Footer from "@/components/footer";
 
 interface Antrag {
@@ -39,6 +40,7 @@ export default  async function Antragsliste(){
                 <div className={"flex gap-2"}>
                     <LoeschenBTN id={a._id}/>
                     <Link href={`/antragBearbeiten/${a._id}`}> <HiPencilAlt size={24}></HiPencilAlt></Link>
+                    <Link href={`/antragAnsehen/${a._id}`}><HiEye size={24}></HiEye> </Link>
                 </div>
             </div>
             ))}
