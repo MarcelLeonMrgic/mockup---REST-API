@@ -37,25 +37,138 @@ export default function AntragErstellen(){
 
     }
     return (<>
-        <form onSubmit={handleSubmit} className={"flex flex-col gap-3"}>
-            <input
-                className={"border border-slate-500 px-8 py-2 "}
-                type="text"
-                placeholder="Antragstitel"
-                onChange={(e)=>{setTitel(e.target.value)}}
-                value = {titel}
-            />
+            <form onSubmit={handleSubmit} className={"flex flex-col gap-3"}>
+                <h1>Art, Umfang und Einsatzort des IT-Systems</h1>
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
 
-            <input
-                className={"border border-slate-500 px-8 py-2 "}
-                type="text"
-                placeholder="Antragsbeschreibung"
-                onChange={(e)=>{setBeschreibung(e.target.value)}}
-                value = {beschreibung}
-            />
+                    onChange={(e) => {
+                        setTitel(e.target.value)
+                    }}
+                    value={titel}
+                />
 
-            <button type="submit" className={"bg-green-600 font-bold text-white py-3 px-6 w-fit"}>Absenden</button>
-        </form>
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+                <input
+                    className={"border border-slate-500 px-8 py-2 "}
+                    type="text"
+                    placeholder="Antragsbeschreibung"
+                    onChange={(e) => {
+                        setBeschreibung(e.target.value)
+                    }}
+                    value={beschreibung}
+                />
+
+                <button type="submit" className={"bg-green-600 font-bold text-white py-3 px-6 w-fit"}>Absenden</button>
+            </form>
 
         </>
 

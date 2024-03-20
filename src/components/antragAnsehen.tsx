@@ -19,7 +19,7 @@ export default function AntragAnsehenUI({ id, titel, beschreibung, genehmigt }: 
             </div>
             <div className="p-4 border-t border-gray-200">
         <span className={`inline-block rounded-full px-3 py-1 text-sm font-semibold ${genehmigt ? 'text-green-900 bg-green-200' : 'text-red-900 bg-red-200'}`}>
-          {genehmigt ? 'Genehmigt' : 'Nicht genehmigt'}
+          {genehmigt ? 'Genehmigt' : 'Derzeit nicht genehmigt'}
         </span>
             </div>
             <div className="p-4 border-t border-gray-200 text-right">
