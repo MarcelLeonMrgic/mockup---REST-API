@@ -1,6 +1,6 @@
 const NewsletterHeader = () => {
     return (
-        <div className="bg-blue-600 text-white py-8 w-full max-w-4xl mx-auto shadow-lg rounded-lg">
+        <div className="bg-blue-600 text-white py-8 w-full max-w-4xl mx-auto my-auto shadow-lg rounded-lg">
             <div className="flex flex-col items-center text-center">
                 <h1 className="text-4xl font-extrabold mb-6">
                     Betriebsinterner Newsletter
