@@ -14,7 +14,9 @@ const antragSchema = new Schema({
     zweckPersBezDaten:String,
     artDatenerfassung:String,
     sicherungVerwaltungLoeschungPersBezDaten:String,
-    genehmigt:Boolean
+
+    genehmigt:Boolean,
+    kommentarBetriebsrat:String
 },
     {
     timestamps: true}
