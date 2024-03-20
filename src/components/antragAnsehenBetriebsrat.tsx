@@ -63,26 +63,28 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
                     <h1 className="text-2xl font-semibold text-gray-900">{titel}</h1>
                 </div>
                 <div className="p-5">
-                    <p className="text-gray-700 mb-4"><strong>Art, Umfang und Einsatzort des IT-Systems:</strong> {aUE}</p>
-                    <p className="text-gray-700 mb-4"><strong>Zweckbestimmung:</strong> {zweckbestimmung}</p>
-                    <p className="text-gray-700 mb-4"><strong>Kosten-Nutzen-Schätzung:</strong> {kostenNutzenSchaetzung}
+                    <p className="text-gray-700 mb-4"><strong>Art, Umfang und Einsatzort des
+                        IT-Systems:<br/></strong> {aUE}</p>
+                    <p className="text-gray-700 mb-4"><strong>Zweckbestimmung:<br/></strong> {zweckbestimmung}</p>
+                    <p className="text-gray-700 mb-4">
+                        <strong>Kosten-Nutzen-Schätzung:<br/></strong> {kostenNutzenSchaetzung}
                     </p>
                     <p className="text-gray-700 mb-4"><strong>Verzeichnis der Hard- und
-                        Software:</strong> {verzeichnisHardSoftware}</p>
+                        Software:<br/></strong> {verzeichnisHardSoftware}</p>
                     <p className="text-gray-700 mb-4"><strong>Konzept der
-                        Zugriffsberechtigung:</strong> {konzeptZugriffsberechtigung}</p>
+                        Zugriffsberechtigung:<br/></strong> {konzeptZugriffsberechtigung}</p>
                     <p className="text-gray-700 mb-4"><strong>Schnittstellen zu
-                        IT-Systemen:</strong> {schnittstellenITSysteme}</p>
+                        IT-Systemen:<br/></strong> {schnittstellenITSysteme}</p>
                     <p className="text-gray-700 mb-4"><strong>Organisatorische und zeitliche
-                        Projektabwicklung:</strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
-                    <p className="text-gray-700 mb-4"><strong>Alternativen:</strong> {alternativen}</p>
+                        Projektabwicklung:<br/></strong> {organisatorischeUndZeitlicheProjektabwicklung}</p>
+                    <p className="text-gray-700 mb-4"><strong>Alternativen:<br/></strong> {alternativen}</p>
                     <p className="text-gray-700 mb-4"><strong>Liste der personenbezogenen
-                        Daten:</strong> {listePersBezDaten}</p>
+                        Daten:<br/></strong> {listePersBezDaten}</p>
                     <p className="text-gray-700 mb-4"><strong>Zweck der Verarbeitung personenbezogener
-                        Daten:</strong> {zweckPersBezDaten}</p>
-                    <p className="text-gray-700 mb-4"><strong>Art der Datenerfassung:</strong> {artDatenerfassung}</p>
+                        Daten:<br/></strong> {zweckPersBezDaten}</p>
+                    <p className="text-gray-700 mb-4"><strong>Art der Datenerfassung:<br/></strong> {artDatenerfassung}</p>
                     <p className="text-gray-700 mb-4"><strong>Sicherung, Verwaltung und Löschung personenbezogener
-                        Daten:</strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
+                        Daten:<br/></strong> {sicherungVerwaltungLoeschungPersBezDaten}</p>
                 </div>
                 <div className="p-5 border-t border-gray-200 flex justify-between items-center">
     <span
