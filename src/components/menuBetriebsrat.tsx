@@ -9,6 +9,7 @@ export default function MenuBetriebsrat() {
                     <Link href={"#"} className="pl-10 pt-5 md:pl-5 md:pt-0  hover:text-indigo-700 text-center">Budgetverwaltung und Finanzberichterstattung</Link>
                     <Link href={"#"} className="pl-10 pt-5 md:pl-5 md:pt-0  hover:text-indigo-700 text-center">Schulungs- und Weiterbildungsmanagement</Link>
                     <Link href={"#"} className="pl-10 pt-5 md:pl-5 md:pt-0   hover:text-indigo-700 text-center">Aufgaben- und Projektmanagement</Link>
+                    <Link href={"/antraegeBetriebsrat"} className="pl-10 pt-5 md:pl-5 md:pt-0   hover:text-indigo-700 text-center">Anträge</Link>
                     <Link href={"#"} className="pl-10 pt-5 md:pl-5 md:pt-0   hover:text-indigo-700 text-center">Sitzungsmanagement</Link>
                     <Link href={"#"} className="pl-10 pt-5 md:pl-5 md:pt-0   hover:text-indigo-700 text-center">Dokumentenmanagement</Link>
                 </nav>
