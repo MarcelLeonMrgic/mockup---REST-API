@@ -39,7 +39,7 @@ export default  async function AntragsListeFuerBetriebsrat(){
 
                     <div className={"flex gap-2"}>
 
-                        <Link href={`/antragAnsehen/${a._id}`}><HiEye size={24}></HiEye> </Link>
+                        <Link href={`/antragAnsehenBetriebsrat/${a._id}`}><HiEye size={24}></HiEye> </Link>
                     </div>
                 </div>
             ))}
