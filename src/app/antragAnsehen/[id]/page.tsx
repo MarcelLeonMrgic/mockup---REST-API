@@ -23,7 +23,7 @@ interface Params {
 }
 
 export default async function SeeTopic({ params }: { params: Params }) {
-    <MenuArbeitgeber/>
+
     const { id } = params;
 
     const { antrag } = await  getTopicById(id);

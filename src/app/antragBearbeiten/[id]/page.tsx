@@ -25,7 +25,21 @@ export default async function EditTopic({ params }: { params: Params }) {
     const { id } = params;
 
     const { antrag } = await  getTopicById(id);
-    const { titel, beschreibung } = antrag;
+    const { titel, aUE , zweckbestimmung,kostenNutzenSchaetzung,verzeichnisHardSoftware,konzeptZugriffsberechtigung,schnittstellenITSysteme,organisatorischeUndZeitlicheProjektabwicklung,alternativen,listePersBezDaten,zweckPersBezDaten,artDatenerfassung,sicherungVerwaltungLoeschungPersBezDaten, genehmigt } = antrag;
 
-    return <AntragBearbeitenUI id={id} titel={titel} beschreibung={beschreibung} />;
+    return <AntragBearbeitenUI id={id}
+                               titel={titel}
+                               aUE={aUE}
+                               zweckbestimmung={zweckbestimmung}
+                               kostenNutzenSchaetzung={kostenNutzenSchaetzung}
+                               verzeichnisHardSoftware={verzeichnisHardSoftware}
+                               konzeptZugriffsberechtigung={konzeptZugriffsberechtigung}
+                               schnittstellenITSysteme={schnittstellenITSysteme}
+                               organisatorischeUndZeitlicheProjektabwicklung={organisatorischeUndZeitlicheProjektabwicklung}
+                               alternativen={alternativen}
+                               listePersBezDaten={listePersBezDaten}
+                               zweckPersBezDaten={zweckPersBezDaten}
+                               artDatenerfassung={artDatenerfassung}
+                               sicherungVerwaltungLoeschungPersBezDaten={sicherungVerwaltungLoeschungPersBezDaten}
+                                />;
 }
