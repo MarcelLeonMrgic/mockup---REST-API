@@ -92,14 +92,14 @@ export default function AntragAnsehenBetriebsratUI({ id, titel, aUE,zweckbestimm
             </div>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
 
-
-
                 <div>
                     <h1>Antrag zustimmen</h1>
                     <input
                         type="checkbox"
-                        onChange={(e)=>setNeueGenehmigt(e.target.checked)}></input>
+                        onChange={(e) => setNeueGenehmigt(e.target.checked)}></input>
                 </div>
+
+                <button type="submit">Submit</button>
 
 
             </form>
