@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
-import ProjektantragNavbar from "@/components/projektAntragNavbar";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +19,7 @@ export default function RootLayout({
     <html lang="de">
     <body className={inter.className}>
     <div>
+      <Analytics/>
 
 
 
